@@ -112,6 +112,7 @@ body {
     margin-left: 93px;
 }
 .navigation-item {
+    position: relative;
     display: block;
     padding-top: 32px;
     padding-bottom: 32px; 
@@ -120,6 +121,17 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-color);
+}
+.navigation-item.current::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #2196F3;
 }
 .navigation-item-list:not(:first-child){
     margin-left: 50px;
@@ -211,12 +223,37 @@ body {
     display: flex;
     gap: 30px;
 }
+.works{
+    padding-top: 0;
+}
 .works-box{
     display: flex;
     gap: 30px;
 }
-.works{
-    padding-top: 0;
+.works-wrapper{
+    position: relative;
+}
+.works-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+}
+.works-overlay-text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 .advantages-item{
     width: 270px;
