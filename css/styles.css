@@ -121,6 +121,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-item.current::after{
     content: " ";
@@ -136,13 +137,10 @@ body {
 .navigation-item-list:not(:first-child){
     margin-left: 50px;
 }
-/* .contacts-list-item{
-    padding-top: 32px;
-    padding-bottom: 32px;
-} */
 .contacts-icon{
     fill: var(--text-color);
     margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-header{
     display: flex;
@@ -154,6 +152,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-list-item:not(:first-child) {
     margin-left: 50px;
@@ -214,10 +213,11 @@ body {
     letter-spacing: 0.06em;
     color: #FFFFFF;
     background: var(--active-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-btn:hover,
 .order-btn:focus {
-    background: #188CE8;
+    background-color: #188CE8;
 }
 .advantages-list {
     display: flex;
@@ -334,6 +334,9 @@ body {
     height: 44px;
     border-radius: 50%;
     fill: #AFB1B8;
+    transition: 
+       fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus{
@@ -351,6 +354,7 @@ body {
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list{
     display: flex;
@@ -370,6 +374,7 @@ body {
     width: 106px;
     height: 60px;
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -392,11 +397,15 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color);
-    }
+    transition: 
+       color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
 .filter-btn:hover,
 .filter-btn:focus {
     color: #FFFFFF;
-    background: var(--active-color);
+    background-color: var(--active-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .examples-cards{
@@ -425,10 +434,35 @@ body {
 }
 .card-item{
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-item:hover,
 .card-item:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.card-wrapper{
+    position: relative;
+}
+.card-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 294px;
+    padding: 63px 24px;
+    background: rgba(33, 150, 243, 0.9);
+}
+.card-overlay-text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
 }
 
 
@@ -476,6 +510,7 @@ footer {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: #FFFFFF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-list-footer:not(:last-child){
     margin-bottom: 9px;
@@ -487,6 +522,7 @@ footer {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address:hover,
 .address:focus,
@@ -518,6 +554,7 @@ footer {
     fill: var(--background-color);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-footer:hover ,
 .social-link-footer:focus {
